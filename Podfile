@@ -7,6 +7,7 @@ target 'RxSwiftPetProject' do
     pod 'RxSwift', '6.6.0'
     pod 'RxCocoa', '6.6.0'
     pod 'SnapKit', '~> 5.6.0'
+    pod 'SDWebImage', '~> 5.0'
   # Pods for RxSwiftPetProject
 
 end
