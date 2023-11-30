@@ -12,21 +12,15 @@ final class Cell: UITableViewCell {
     
     static let identifier = "Cell"
     
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.numberOfLines = 0
-        label.adjustsFontSizeToFitWidth = true
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private lazy var cellImageView: UIImageView = {
+        $0.contentMode = .scaleAspectFit
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UIImageView())
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
-        setupConstreints()
     }
     
     required init?(coder: NSCoder) {
@@ -34,17 +28,16 @@ final class Cell: UITableViewCell {
     }
     
     private func setupUI() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubview(cellImageView)
+        setupConstreints()
     }
     
-    func configureCell (_ text: String?) {
-        guard let textLabel = text else { return }
+    func configureCell (_ imageURL: String?) {
         
-        self.titleLabel.text = textLabel
     }
     
     private func setupConstreints(){
-        titleLabel.snp.makeConstraints { make in
+        cellImageView.snp.makeConstraints { make in
             make.leading.equalTo(contentView).offset(16)
             make.trailing.equalTo(contentView).offset(-16)
             make.top.equalTo(contentView).offset(8)
