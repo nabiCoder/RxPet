@@ -36,7 +36,6 @@ final class NetworkManager {
                     throw NetworkError.decodingFailed
                 }
             }
-            .catchAndReturn([])
             .asObservable()
     }
 }

@@ -7,13 +7,15 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 final class Cell: UITableViewCell {
     
     static let identifier = "Cell"
     
-    private lazy var cellImageView: UIImageView = {
+    private let cellImageView: UIImageView = {
         $0.contentMode = .scaleAspectFit
+        $0.clipsToBounds = true
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIImageView())
@@ -32,8 +34,8 @@ final class Cell: UITableViewCell {
         setupConstreints()
     }
     
-    func configureCell (_ imageURL: String?) {
-        
+    func configureCell (_ imageURLString: URL) {
+        cellImageView.sd_setImage(with: imageURLString)
     }
     
     private func setupConstreints(){
@@ -42,6 +44,7 @@ final class Cell: UITableViewCell {
             make.trailing.equalTo(contentView).offset(-16)
             make.top.equalTo(contentView).offset(8)
             make.bottom.equalTo(contentView).offset(-8)
+            make.height.equalTo(cellImageView.snp.width)
         }
     }
 }

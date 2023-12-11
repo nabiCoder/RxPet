@@ -63,6 +63,68 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3999F5052B272263007E6D70 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				39E953BD2B0CDD29007142FE /* Assets.xcassets */,
+				39E953BF2B0CDD29007142FE /* LaunchScreen.storyboard */,
+				39E953C22B0CDD29007142FE /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3999F5062B272284007E6D70 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				39E953B42B0CDD29007142FE /* AppDelegate.swift */,
+				39E953B62B0CDD29007142FE /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3999F5072B272299007E6D70 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				398FD5282B10E62700A6E9CD /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3999F5082B2722D0007E6D70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				398FD52A2B10E71E00A6E9CD /* DataStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3999F5092B2722E8007E6D70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39E953B82B0CDD29007142FE /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3999F50A2B2722FA007E6D70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				398FD5262B10C89E00A6E9CD /* Cell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3999F50B2B27230B007E6D70 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				3999F5072B272299007E6D70 /* Network */,
+				3999F5082B2722D0007E6D70 /* Model */,
+				3999F50A2B2722FA007E6D70 /* View */,
+				3999F5092B2722E8007E6D70 /* Controller */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
 		39E953A82B0CDD29007142FE = {
 			isa = PBXGroup;
 			children = (
@@ -84,15 +146,9 @@
 		39E953B32B0CDD29007142FE /* RxSwiftPetProject */ = {
 			isa = PBXGroup;
 			children = (
-				39E953B42B0CDD29007142FE /* AppDelegate.swift */,
-				398FD5282B10E62700A6E9CD /* NetworkManager.swift */,
-				398FD52A2B10E71E00A6E9CD /* DataStruct.swift */,
-				39E953B62B0CDD29007142FE /* SceneDelegate.swift */,
-				398FD5262B10C89E00A6E9CD /* Cell.swift */,
-				39E953B82B0CDD29007142FE /* MainViewController.swift */,
-				39E953BD2B0CDD29007142FE /* Assets.xcassets */,
-				39E953BF2B0CDD29007142FE /* LaunchScreen.storyboard */,
-				39E953C22B0CDD29007142FE /* Info.plist */,
+				3999F50B2B27230B007E6D70 /* MainModule */,
+				3999F5062B272284007E6D70 /* Application */,
+				3999F5052B272263007E6D70 /* SupportingFiles */,
 			);
 			path = RxSwiftPetProject;
 			sourceTree = "<group>";
